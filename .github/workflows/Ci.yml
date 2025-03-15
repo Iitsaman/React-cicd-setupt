@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+       # Set up Node.js
     steps:
       - name: "setup node js"
         uses: actions/setup-node@v4
@@ -17,3 +17,6 @@ jobs:
 
       - name: "version check"
         run: node --version
+
+      - name: "clone repo"
+        uses: actions/checkout@v2
