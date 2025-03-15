@@ -1,0 +1,19 @@
+name: "react ci pipeline"
+
+on:
+    push:
+      branches:
+        - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest       
+    # Set up Node.js
+    steps:
+        - name: "setup node js"
+          uses:  actions/setup-node@v4
+          with:
+           node-version: '21' 
+
+           -name: "verion check"
+           run: node --version
